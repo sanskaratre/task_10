@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task_10</title>
+</head>
+<body>
+  <div>
+    <header id="header_id">
+      <h1>User Details</h1>
+    </header>
+  </div>
+  <form onsubmit="saveToLocalStorage(event)">
+    Name:
+    <br>
+    <input type="text" name="userName" placeholder="Enter Your Name" required/>
+    <br>
+    Email:
+    <br>
+    <input type="email" name="emailId" placeholder="Enter Your emailId" required/>
+    <br><br>
+    <button>submit</button>
+  </form>
+  
+  <script>
+    function saveToLocalStorage(e){
+      event.preventDefault();
+      const uName = event.target.userName.value;
+      const uEmailId = event.target.emailId.value;
+      localStorage.setItem('name', uName);
+      localStorage.setItem('emailIdS', uEmailId);
+    }
+    
+  </script>  
+</body>
+</html>
